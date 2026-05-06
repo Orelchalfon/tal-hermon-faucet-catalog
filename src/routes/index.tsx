@@ -88,9 +88,9 @@ const configs = [
     ],
   },
   {
-    id: "compact-bar",
-    title: "ברז קומפקטי לבר מים",
-    placeholder: "תמונת ברז קומפקטי לפינת בר מים",
+    id: "cobra-cold-soda",
+    title: "ברז קוברה סודה ומים קרים",
+    placeholder: "תמונת ברז קוברה סודה ומים קרים",
     description:
       "ברז קטן וחסכוני במקום, אידיאלי לפינת בר מים נפרדת או למטבח משני.",
     benefits: [
