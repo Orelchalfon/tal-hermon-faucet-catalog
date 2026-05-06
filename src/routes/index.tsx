@@ -14,6 +14,15 @@ import {
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import twoHandleFaucet from "@/assets/two-handle-faucet.jpg";
+import oneHandle3 from "@/assets/one-handle-3.jpg";
+import f0705b from "@/assets/f0705-b.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({
   component: CatalogPage,
@@ -37,6 +46,7 @@ const configs = [
     id: "stick-1-plus",
     title: "ברז חם קר + ברז סודה",
     placeholder: "תמונת ברז מזיגה ברז חם קר + ברז סודה",
+    images: [oneHandle3, f0705b],
     description: "ברז ייעודי למים חמים קרים לצד ברז מזיגה נוסף לסודה.",
     benefits: [
       "הפרדה בין מערכת הסודה למערכת המים",
@@ -133,7 +143,32 @@ function ImagePlaceholder({ caption }: { caption: string }) {
   );
 }
 
-function ImageOrPlaceholder({ caption, image }: { caption: string; image?: string }) {
+function ImageOrPlaceholder({
+  caption,
+  image,
+  images,
+}: {
+  caption: string;
+  image?: string;
+  images?: string[];
+}) {
+  if (images && images.length > 0) {
+    return (
+      <Carousel opts={{ direction: "rtl", loop: true }} className="w-full">
+        <CarouselContent>
+          {images.map((src, i) => (
+            <CarouselItem key={i}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-aqua/30 bg-gradient-to-br from-brand-mist to-white">
+                <img src={src} alt={caption} className="h-full w-full object-contain p-4" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-2 right-auto" />
+        <CarouselNext className="right-2 left-auto" />
+      </Carousel>
+    );
+  }
   if (image) {
     return (
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-aqua/30 bg-gradient-to-br from-brand-mist to-white">
@@ -221,7 +256,11 @@ function Configurations() {
               key={c.id}
               className="flex flex-col rounded-3xl border border-brand-navy/5 bg-white p-5 shadow-[0_10px_40px_-20px_oklch(0.22_0.04_255/0.25)]"
             >
-              <ImageOrPlaceholder caption={c.placeholder} image={(c as { image?: string }).image} />
+              <ImageOrPlaceholder
+                caption={c.placeholder}
+                image={(c as { image?: string }).image}
+                images={(c as { images?: string[] }).images}
+              />
               <h3 className="mt-5 text-lg font-bold text-brand-navy">
                 {c.title}
               </h3>
