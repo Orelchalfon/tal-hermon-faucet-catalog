@@ -21,6 +21,8 @@ import cobraCombined2 from "@/assets/cobra-combined-2.jpg";
 import cobraSodaOnly from "@/assets/cobra-soda-only.png";
 import compactBar from "@/assets/compact-bar.png";
 import touchFaucet from "@/assets/touch-faucet.png";
+import italian1 from "@/assets/italian-1.png";
+import italian2 from "@/assets/italian-2.png";
 import {
   Carousel,
   CarouselContent,
@@ -63,6 +65,7 @@ const configs = [
     id: "all-in-one",
     title: "ברז איטלקי חם קר וסודה",
     placeholder: "תמונה של ברז איטלקי חם קר וסודה",
+    images: [italian1, italian2],
     description: "​ברז איטלקי נלווה 3 ב-1 המשלב מים קרים,חמים וסודה",
     benefits: [
       "​ברז איטלקי בעיצוב יוקרתי",
