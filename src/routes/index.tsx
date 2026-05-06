@@ -50,7 +50,7 @@ const finishes = [
   { name: "שחור", style: "linear-gradient(135deg,#3a3a3a,#0d0d0d)" },
 ];
 
-function ImagePlaceholder({ caption, url }: { caption: string; url: string }) {
+function ImagePlaceholder({ caption, url = "" }: { caption: string; url?: string }) {
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-aqua/30 bg-gradient-to-br from-brand-mist to-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,var(--color-brand-aqua-soft),transparent_60%)]" />
