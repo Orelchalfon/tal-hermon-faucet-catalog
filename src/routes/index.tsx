@@ -18,6 +18,7 @@ import oneHandle3 from "@/assets/one-handle-3.jpg";
 import f0705b from "@/assets/f0705-b.jpg";
 import cobraCombined1 from "@/assets/cobra-combined-1.jpg";
 import cobraCombined2 from "@/assets/cobra-combined-2.jpg";
+import cobraSodaOnly from "@/assets/cobra-soda-only.png";
 import {
   Carousel,
   CarouselContent,
@@ -95,6 +96,7 @@ const configs = [
     id: "cobra-soda-only",
     title: "ברז קוברה לסודה בלבד",
     placeholder: "תמונת ברז קוברה לסודה בלבד",
+    image: cobraSodaOnly,
     description: "ברז בעיצוב קשתי ייחודי שמשלב אסתטיקה גבוהה למזיגת סודה",
     benefits: [
       "עיצוב קשתי בולט",
