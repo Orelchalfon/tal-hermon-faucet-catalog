@@ -19,6 +19,7 @@ import f0705b from "@/assets/f0705-b.jpg";
 import cobraCombined1 from "@/assets/cobra-combined-1.jpg";
 import cobraCombined2 from "@/assets/cobra-combined-2.jpg";
 import cobraSodaOnly from "@/assets/cobra-soda-only.png";
+import compactBar from "@/assets/compact-bar.png";
 import {
   Carousel,
   CarouselContent,
@@ -108,6 +109,7 @@ const configs = [
     id: "compact-bar",
     title: "ברז קומפקטי לבר מים",
     placeholder: "תמונת ברז קומפקטי לפינת בר מים",
+    image: compactBar,
     description:
       "ברז קטן וחסכוני במקום, אידיאלי לפינת בר מים נפרדת או למטבח משני.",
     benefits: [
