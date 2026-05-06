@@ -16,6 +16,8 @@ import { toast } from "sonner";
 import twoHandleFaucet from "@/assets/two-handle-faucet.jpg";
 import oneHandle3 from "@/assets/one-handle-3.jpg";
 import f0705b from "@/assets/f0705-b.jpg";
+import cobraCombined1 from "@/assets/cobra-combined-1.jpg";
+import cobraCombined2 from "@/assets/cobra-combined-2.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -80,6 +82,7 @@ const configs = [
     id: "cobra-faucet",
     title: "ברז משולב + ברז סודה",
     placeholder: "תמונת ברז משולב + ברז סודה",
+    images: [cobraCombined1, cobraCombined2],
     description:
       "ברז משולב עם פיה נשלפת לשטיפת כלים יחד עם מזיגת מים קרים וברז נלווה לסודה.",
     benefits: [
