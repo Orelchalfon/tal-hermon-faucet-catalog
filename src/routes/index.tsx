@@ -126,20 +126,14 @@ const configs = [
 ];
 
 const finishes = [
-  { name: "זהב", style: "linear-gradient(135deg,#e9c87a,#bf8f33)" },
+  { name: "ניקל", style: "linear-gradient(135deg,#e6e8ec,#9aa1ab)", note: "במלאי" },
+  { name: "שחור", style: "linear-gradient(135deg,#3a3a3a,#0d0d0d)", note: "במלאי" },
   {
     name: "זהב מוברש",
     style:
       "repeating-linear-gradient(135deg,#d8b465 0 2px,#b88a35 2px 4px)",
+    note: "במלאי · תוספת 400 ₪",
   },
-  { name: "ניקל", style: "linear-gradient(135deg,#e6e8ec,#9aa1ab)" },
-  {
-    name: "ניקל מוברש",
-    style:
-      "repeating-linear-gradient(135deg,#cfd3d8 0 2px,#9aa1ab 2px 4px)",
-  },
-  { name: "רוזגולד", style: "linear-gradient(135deg,#f3c6b4,#b87363)" },
-  { name: "שחור", style: "linear-gradient(135deg,#3a3a3a,#0d0d0d)" },
 ];
 
 function ImagePlaceholder({ caption }: { caption: string }) {
@@ -419,10 +413,10 @@ function Finishes() {
             גימורי ברז זמינים
           </h2>
           <p className="mt-3 text-brand-navy/70">
-            כל ברז זמין במגוון גימורים שמשתלבים בעיצוב המטבח שלכם.
+            כרגע זמינים במלאי שלושה גימורים בלבד. גימור זהב מוברש בתוספת של 400 ₪.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6 sm:grid-cols-6">
+        <div className="grid grid-cols-3 gap-6">
           {finishes.map((f) => (
             <div key={f.name} className="flex flex-col items-center gap-3">
               <div
@@ -433,6 +427,7 @@ function Finishes() {
               <span className="text-sm font-medium text-brand-navy">
                 {f.name}
               </span>
+                <span className="text-xs text-brand-navy/60">{f.note}</span>
             </div>
           ))}
         </div>
