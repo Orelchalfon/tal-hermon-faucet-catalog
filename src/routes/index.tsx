@@ -144,7 +144,6 @@ function Configurations() {
                   <li key={b} className="flex items-start gap-2 text-sm text-brand-navy/80">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-aqua" />
                     <span>{b}</span>
-                    <p className="text-xl text-black w-full">* יש אפשרות לפיקוד שבת בפיקוח משמרת השבת</p>
                   </li>
                 ))}
               </ul>
