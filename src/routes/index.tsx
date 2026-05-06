@@ -214,7 +214,17 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,oklch(0.78_0.13_200/0.18),transparent_60%)]" />
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
         <div className="order-2 md:order-1">
-          <ImagePlaceholder caption="תמונת מערכת ברז סודה וחם/קר תת־כיורית" />
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-aqua/30 bg-brand-navy">
+            <video
+              src="/hero-faucet.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
         <div className="order-1 flex flex-col justify-center md:order-2">
           <span className="mb-4 inline-block w-fit rounded-full border border-brand-aqua/40 bg-brand-aqua/10 px-3 py-1 text-xs font-medium text-brand-aqua">
