@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
+import twoHandleFaucet from "@/assets/two-handle-faucet.jpg";
 
 export const Route = createFileRoute("/")({
   component: CatalogPage,
@@ -23,6 +24,7 @@ const configs = [
     id: "stick-2",
     title: "ברז נלווה מים קרים וסודה",
     placeholder: "תמונת ברז מזיגה רגיל ברז נלווה מים קרים וסודה",
+    image: twoHandleFaucet,
     description:
       "ברז קלאסי עם שתי ידיות נפרדות \nאחת למים קרים מסוננים ואחת לסודה מוגזת ישירות מהברז.",
     benefits: [
@@ -131,6 +133,17 @@ function ImagePlaceholder({ caption }: { caption: string }) {
   );
 }
 
+function ImageOrPlaceholder({ caption, image }: { caption: string; image?: string }) {
+  if (image) {
+    return (
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-aqua/30 bg-gradient-to-br from-brand-mist to-white">
+        <img src={image} alt={caption} className="h-full w-full object-contain p-4" />
+      </div>
+    );
+  }
+  return <ImagePlaceholder caption={caption} />;
+}
+
 function TopBar() {
   return (
     <header className="sticky top-0 z-30 border-b border-white/10 bg-brand-ink/95 backdrop-blur">
@@ -208,7 +221,7 @@ function Configurations() {
               key={c.id}
               className="flex flex-col rounded-3xl border border-brand-navy/5 bg-white p-5 shadow-[0_10px_40px_-20px_oklch(0.22_0.04_255/0.25)]"
             >
-              <ImagePlaceholder caption={c.placeholder} />
+              <ImageOrPlaceholder caption={c.placeholder} image={(c as { image?: string }).image} />
               <h3 className="mt-5 text-lg font-bold text-brand-navy">
                 {c.title}
               </h3>
