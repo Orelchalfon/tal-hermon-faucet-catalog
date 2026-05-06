@@ -154,4 +154,7 @@
     color: var(--color-foreground);
     font-family: "Heebo", ui-sans-serif, system-ui, sans-serif;
   }
+  img {
+    mix-blend-mode: color-burn;
+  }
 }
