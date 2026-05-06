@@ -45,12 +45,6 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "טל חרמון — ברזי מזיגה למים קרים, חמים וסודה" },
-      { name: "description", content: "A premium Hebrew RTL catalog page showcasing a multi-function soda tap faucet system." },
-      { property: "og:description", content: "A premium Hebrew RTL catalog page showcasing a multi-function soda tap faucet system." },
-      { name: "twitter:description", content: "A premium Hebrew RTL catalog page showcasing a multi-function soda tap faucet system." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/655b4932-551b-4101-93d3-0ce15513fa4e/id-preview-ebbd1453--a4a6f8f8-53f6-4245-9243-8c7d61e7e320.lovable.app-1778059892337.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/655b4932-551b-4101-93d3-0ce15513fa4e/id-preview-ebbd1453--a4a6f8f8-53f6-4245-9243-8c7d61e7e320.lovable.app-1778059892337.png" },
     ],
     links: [
       {
