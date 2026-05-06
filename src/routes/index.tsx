@@ -20,6 +20,7 @@ import cobraCombined1 from "@/assets/cobra-combined-1.jpg";
 import cobraCombined2 from "@/assets/cobra-combined-2.jpg";
 import cobraSodaOnly from "@/assets/cobra-soda-only.png";
 import compactBar from "@/assets/compact-bar.png";
+import touchFaucet from "@/assets/touch-faucet.png";
 import {
   Carousel,
   CarouselContent,
@@ -73,6 +74,7 @@ const configs = [
     id: "touch-faucet",
     title: "ברז טאצ' חם קר סודה",
     placeholder: "תמונת ברז טאצ' חם קר סודה",
+    image: touchFaucet,
     description: "מכשיר קומפקטי הממוקם מתחת לכיור ומספק מים קרים, חמים וסודה.\n",
     benefits: [
       "פיה גבוהה במיוחד",
